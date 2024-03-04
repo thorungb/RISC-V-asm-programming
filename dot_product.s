@@ -2,6 +2,7 @@
 a: .word 1, 2, 3, 4, 5
 b: .word 6, 7, 8, 9, 10
 massage: .string "The dot product is: "
+newline: .string "\n"
 
 .text
 main:
@@ -34,6 +35,10 @@ exit:
 
     addi a0, x0, 1
     add a1, x0, x6              # print sop
+    ecall
+    
+    addi a0, x0, 4
+    la a1, newline               # print newline
     ecall
     
     addi    a0, x0, 10
