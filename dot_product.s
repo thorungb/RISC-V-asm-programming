@@ -1,7 +1,7 @@
 .data
 a: .word 1, 2, 3, 4, 5
 b: .word 6, 7, 8, 9, 10
-massage: .string "The dot product is: "
+message: .string "The dot product is: "
 newline: .string "\n"
 
 .text
@@ -30,7 +30,7 @@ for_loop:
     
 exit:
     addi a0, x0, 4
-    la a1, massage               # print string
+    la a1, message               # print string
     ecall
 
     addi a0, x0, 1
